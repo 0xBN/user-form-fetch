@@ -1,13 +1,15 @@
-import { Register } from './components';
+import { RegisterArea } from './components';
+import { UserProvider } from './context/UserContext';
 
 function App() {
   return (
-    <div className='bg-slate-800 text-white min-h-screen border grid place-content-center'>
-      <h1>Sign Up Here</h1>
-      <div className={`border`}>
-        <Register />
+    <UserProvider>
+      <div className='grid min-h-screen min-w-[300px] place-content-center border bg-slate-800 text-white'>
+        <div className={`rounded-md border bg-slate-900 p-4`}>
+          <RegisterArea />
+        </div>
       </div>
-    </div>
+    </UserProvider>
   );
 }
 

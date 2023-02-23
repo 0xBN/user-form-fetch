@@ -1,5 +1,8 @@
 # Frontend Take-Home Exercise (Fetch)
 
+## Recommendations / Assumptions
+- First name and last name be split out in the backend database for data cleanliness. For this exercise, I have created a component that can be easily modified for this change, or if it is not possible to change the backend logic it can also be modified to just accept full name as one field. Currently it is submitting the name field with a space between the first and last name.
+
 ## Task
 Build a webpage with a user creation form. Form has the following
 - Full Name
@@ -47,12 +50,16 @@ The POST endpoint will return a 201 status code if all fields are provided. The 
 ```
 
 ## Minimum Requirements
-- [ ] Display a form with inputs for each field outlined above
-- [ ] Allow a user to complete and submit the form
-- [ ] Do not allow form submission without completing the entire form
-- [ ] Provide feedback upon successful form submission
-- [ ] Have its soure code stored in a code repository
-- [ ] Be hosted on the internet
+- [x] Display a form with inputs for each field outlined above
+- [x] Allow a user to complete and submit the form
+- [x] Do not allow form submission without completing the entire form
+- [x] Provide feedback upon successful form submission
+- [x] Have its soure code stored in a code repository
+- [x] Be hosted on the internet
+- [x] Email Validation
+- [x] Password Validation
+- [x] Validate drop downs: Occupation, State
+- [x] Error message appearing does not cause form to grow / shrink drastically
 
 ***
 
