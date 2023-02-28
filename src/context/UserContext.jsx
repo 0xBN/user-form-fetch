@@ -11,6 +11,7 @@ export const UserProvider = ({ children }) => {
   const [occupationValid, setOccupationValid] = useState(false);
   const [stateValid, setStateValid] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   return (
     <UserContext.Provider
@@ -31,6 +32,8 @@ export const UserProvider = ({ children }) => {
         setStateValid,
         success,
         setSuccess,
+        isLoading,
+        setIsLoading,
       }}
     >
       {children}

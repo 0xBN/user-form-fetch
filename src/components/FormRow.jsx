@@ -60,7 +60,7 @@ const FormRow = ({
         {label}
       </label>
       <input
-        className={`rounded-sm text-black ${
+        className={`rounded-sm p-2 text-black ${
           !isValid && showMessage && 'rounded-sm ring-2 ring-red-500'
         }
         ${isValid && 'rounded-sm ring-2 ring-green-500 '}

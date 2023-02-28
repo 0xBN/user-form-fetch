@@ -8,8 +8,12 @@ const RegisterArea = () => {
   let formContent = success ? <SuccessRegister /> : <Register />;
   return (
     <>
-      {<h1 className={`text-center text-xl font-bold`}> {formTitle} </h1>}
-      {formContent}
+      {
+        <>
+          {<h1 className={`text-center text-xl font-bold`}> {formTitle} </h1>}
+          {formContent}
+        </>
+      }
     </>
   );
 };

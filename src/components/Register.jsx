@@ -27,7 +27,7 @@ const Register = () => {
     setSuccess,
   } = useContext(UserContext);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let name =
       formRef.current.firstName.value + ' ' + formRef.current.lastName.value;
@@ -44,11 +44,18 @@ const Register = () => {
       occupationValid &&
       stateValid
     ) {
-      postUser(user);
-      setMessage('submitted!');
-      setSuccess(true);
+      try {
+        await postUser(user);
+        setMessage('Submitted!');
+        setSuccess(true);
+      } catch (error) {
+        console.error(error);
+        setMessage('Error submitting form. Please try again.');
+        setSuccess(false);
+      }
     } else {
       setMessage('Please fill in all fields');
+      setSuccess(false);
     }
   };
 
@@ -83,6 +90,8 @@ const Register = () => {
           ...data.states,
         ]);
         setOccupations(['Select an option....', ...data.occupations]);
+        if (states.length && occupations.length) {
+        }
       } catch (error) {
         console.log(error(error));
       }
